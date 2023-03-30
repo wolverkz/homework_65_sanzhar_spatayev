@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Задание 1 -->
+    <script>
+        console.log('Задание 1');
+        console.log('-'.repeat(20));
+
+        let products = ["Milk","Beer","Beer","Milk","Milk","Milk"];
+
+        for(item in products) {
+           switch (products[item]) {
+            case "Milk":
+                console.log(products[item] + ' ' + 'Good');
+                break;
+            case "Beer":
+                console.log(products[item] + ' ' + 'Bad');
+                break;
+            default:
+                console.log('Uknown');
+           }; 
+        };
+    </script>
+    <!-- Задание 2 -->
+    <script>
+        console.log('\n');
+        console.log('Задание 2');
+        console.log('-'.repeat(20));
+
+        let array1 = [1, 5, 12, 4, 3];
+        let array2 = [2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let array3 = [3, 10, 17];
+
+        function arraysum(array) {
+            let sum = 0;
+            for (num in array) {
+                sum = sum + array[num];
+            }
+            return sum/array.length;
+        };
+
+        console.log(arraysum(array1));
+        console.log(arraysum(array2));
+        console.log(arraysum(array3));
+
+    </script>
+    <!-- Задание 3 -->
+    <script>
+        console.log('\n');
+        console.log('Задание 3');
+        console.log('-'.repeat(20));
+
+        function game(){
+            while (true) {
+                let num = prompt('У квадратного стола отпилили один угол. Сколько теперь углов у него стало?');
+                
+                if (num == '5' || num == 'пять') {
+                    alert(num + ' | Ответ верный!');
+                    break;
+                } else {
+                    alert(num + ' | Ответ неверный!');
+                };
+            };
+        };
+
+        game()
+    </script>
+    <!-- Задание 4 -->
+    <script>
+        console.log('\n');
+        console.log('Задание 4');
+        console.log('-'.repeat(20));
+
+        const duck = {
+            name: 'Дональд',
+            color: 'Белый',
+            age: 1,
+            toStr: function() {
+                return this.name + ', ' + this.color + ', ' + this.age + ' год';
+            },
+            say: function() {
+                return 'кря кря';
+            } 
+        };
+
+        console.log(duck.toStr() +'\n'+duck.say())
+    </script>
+</body>
+</html>
